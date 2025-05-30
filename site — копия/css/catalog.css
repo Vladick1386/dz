@@ -1,0 +1,278 @@
+.content {
+    display: flex;
+    padding: 0 240px;
+}
+
+.index {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.index h2 {
+    margin: 0;
+}
+
+.index-f {
+    display: flex;
+}
+
+.filters {
+    height: 100%;
+}
+
+.filter-block {
+    margin: 10px;
+}
+
+.filter-block-m {
+    border: 1px solid white;
+}
+
+.filter-param-l {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-param-p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.filters input[type="text"] {
+    padding: 10px 0;
+    border: none;
+    text-align: center;
+    width: 48%;
+}
+
+.checkbox {
+    display: flex;
+    margin: 4px 0;
+}
+
+.checkbox label {
+    margin: 0;
+    color: white;
+}
+
+.checkbox input {
+    border: none;
+    height: 20px;
+}
+
+.tovars {
+    margin-left: 20px;
+    width: 100%;
+}
+
+.product-card {
+    display: flex;
+    border: 1px solid #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.product-title {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+}
+
+.product-description {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-btn button {
+    background-color: #ff000000;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 190px;
+    border: 1px solid #ffffff;
+}
+
+.product-btn button:hover {
+    background-color: #7a00b300;
+}
+
+.product-btn {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.burger-menu-btn {
+    display: none;
+}
+
+.filter-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.filter-param-p {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+
+#apply-filters,
+#load-more-btn {
+    background-color: #7a00b300;
+    color: #ffffff;
+    border: 1px solid white;
+    padding: 12px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+}
+
+#apply-filters:hover,
+#load-more-btn:hover {
+    background-color: #a033d200;
+}
+
+
+.index select#sort-price {
+    background-color: #7a00b300;
+    color: #ffffff;
+    border: 1px solid white;
+    padding: 6px 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.index option{
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: none;
+}
+
+.index select#sort-price:hover {
+    background-color: #a033d200;
+}
+
+.index select#sort-price:focus {
+    outline: none;
+}
+
+
+@media (max-width: 768px) {
+    .burger-menu-btn {
+        background-color: #000000; 
+        color: white;
+        display: inline-block;
+        position: absolute;
+        top: 18%;
+        border-radius: 0 20px 20px 0;
+        border: 1px solid white;
+        height: 50px;
+    }
+
+    .burger-menu-btn button {
+        border-radius: 10% 0;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 0 ;
+    }
+
+    .index {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .index h2 {
+        margin-bottom: 10px;
+    }
+
+    #sort-price {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .filters {
+        display: none;
+    }
+
+    .tovars {
+        margin-left: 0;
+    }
+
+    .product-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .product-card {
+        flex-wrap: wrap;
+        align-content: space-between;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .product-txt {
+        font-size: 0.9em;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .product-btn {
+        margin-left: 0;
+        margin-top: 5px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-btn button {
+        width: 100%;
+        font-size: 0.9em;
+        padding: 8px 0;
+    }
+
+    #apply-filters,
+    #load-more-btn,
+    #sort-price {
+        width: 100%;
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
