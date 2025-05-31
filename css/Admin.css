@@ -1,0 +1,128 @@
+ .content {
+    margin: 0 240px;
+    padding: 20px;
+    border: 1px solid white;
+  }
+  
+  li {
+    color: white;
+  }
+
+
+  #product-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #product-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #product-list li:last-child {
+    border-bottom: none;
+  }
+  
+  #product-list .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  #product-list .actions button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+
+  #edit-product-form {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #ff000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid white;
+  }
+  
+  button:hover {
+    background-color: #cc0000;
+  }
+
+
+#admin-nav {
+  margin-bottom: 20px;
+}
+
+#admin-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+#admin-nav li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#admin-nav li a:hover {
+  text-decoration: underline;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f4f4f4;
+}
+
+
+.actions button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+} 
+
+
+.admin-section {
+  display: none;
+}
+
+
+.admin-section.active {
+  display: block;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Детали товара</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/Config-pc.css">
+  <script src="js/script.js"></script>
+  <script src="js/Config-pc.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div>
+        <a href="index.html"><img class="icon" src="img/logo.svg" alt="logo" /></a>
+      </div>
+      <div class="button">
+        <a href="index.html"><img src="img/search.png" alt="search" /></a>
+        
+<!-- Избранное -->
+<div class="favorite-dropdown" data-dropdown>
+  <div class="favorite-icon">
+    <img src="img/favorite.png" alt="favorite" />
+    <span class="favorite-count">0</span>
+  </div>
+  <div class="favorite-dropdown-content">
+    <p>В избранном пока ничего нет.</p>
+  </div>
+</div>
+
+<!-- Корзина -->
+<div class="cart-dropdown" data-dropdown>
+  <div class="cart-icon">
+    <img src="img/cars.png" alt="cars"/>
+    <span class="cart-count">0</span>
+  </div>
+  <div class="cart-dropdown-content">
+    <p>В корзине пока ничего нет.</p>
+  </div>
+</div>
+  
+        <a href="index.html"><img src="img/user.png" alt="user" /></a>
+      </div>
+    </div>
+    
+    <div class="menu">
+      <div class="menu-ul">
+        <div class="catalog-menu">
+          <p><a class="burger-menu" href="javascript:void(0)">Каталог</a></p>
+          <div class="dropdown-content">
+            <a href="Catalog.html">Компютеры</a>
+            <a href="Catalog.html">Моноблоки</a>
+            <a href="Catalog.html">Ноутбуки</a>
+            <a href="Catalog.html">Комплектующие</a>
+            <a href="Catalog.html">Периферия</a>
+            <a href="Catalog.html">Мониторы</a>
+          </div>
+        </div>
+        <p><a href="config-pc.html">Конфигуратор ПК</a></p>
+        <p><a href="pack.html">Помощь</a></p>
+      </div>
+    </div>
+    
+    <div class="search-modal-overlay" id="searchOverlay">
+      <div class="search-modal">
+        <form id="searchForm">
+          <div class="form-group-s">
+            <input type="text" id="searchInput" name="search" placeholder="Введите запрос..." required />
+          </div>
+          <div>
+            <button type="submit">Найти</button>
+          </div>
+        </form>
+        <!-- Контейнер для результатов поиска -->
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </div>
+    <div class="auth-modal-overlay" id="authOverlay">
+      <div class="auth-modal">
+        <span class="close-btn">&times;</span>
+        <h2>Авторизация</h2>
+        <form id="authForm">
+          <div class="form-group">
+            <label for="email">Email или логин</label>
+            <input type="text" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit">Войти</button>
+          <div class="auth-links">
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Регистрация</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="content">
+      <h1>Конфигуратор ПК</h1>
+      
+      <!-- Форма конфигуратора -->
+      <form class="configurator-form">
+        <div class="config-section">
+          <h2>Процессор</h2>
+          <select class="config-select">
+            <option value="">Выберите процессор</option>
+            <option value="i5-12400">Intel Core i5-12400</option>
+            <option value="i7-12700">Intel Core i7-12700</option>
+            <option value="Ryzen 5 5600X">AMD Ryzen 5 5600X</option>
+            <option value="Ryzen 7 5800X">AMD Ryzen 7 5800X</option>
+          </select>
+        </div>
+
+        <div class="config-section">
+          <h2>Видеокарта</h2>
+          <select class="config-select">
+            <option value="">Выберите видеокарту</option>
+            <option value="RTX 3060">NVIDIA GeForce RTX 3060</option>
+            <option value="RTX 3070">NVIDIA GeForce RTX 3070</option>
+            <option value="RX 6700 XT">AMD Radeon RX 6700 XT</option>
+            <option value="RX 6800">AMD Radeon RX 6800</option>
+          </select>
+        </div>
+
+        <div class="config-section">
+          <h2>Оперативная память</h2>
+          <select class="config-select">
+            <option value="">Выберите объем памяти</option>
+            <option value="8GB">8GB DDR4</option>
+            <option value="16GB">16GB DDR4</option>
+            <option value="32GB">32GB DDR4</option>
+            <option value="64GB">64GB DDR4</option>
+          </select>
+        </div>
+
+        <div class="config-section">
+          <h2>Накопитель</h2>
+          <select class="config-select">
+            <option value="">Выберите накопитель</option>
+            <option value="256GB SSD">256GB SSD</option>
+            <option value="512GB SSD">512GB SSD</option>
+            <option value="1TB SSD">1TB SSD</option>
+            <option value="2TB HDD">2TB HDD</option>
+          </select>
+        </div>
+
+        <div class="config-section">
+          <h2>Материнская плата</h2>
+          <select class="config-select">
+            <option value="">Выберите материнскую плату</option>
+            <option value="B560">ASUS B560</option>
+            <option value="Z690">MSI Z690</option>
+            <option value="B550">Gigabyte B550</option>
+            <option value="X570">ASRock X570</option>
+          </select>
+        </div>
+
+        <div class="config-section">
+          <h2>Блок питания</h2>
+          <select class="config-select">
+            <option value="">Выберите блок питания</option>
+            <option value="500W">500W Bronze</option>
+            <option value="650W">650W Gold</option>
+            <option value="750W">750W Gold</option>
+            <option value="1000W">1000W Platinum</option>
+          </select>
+        </div>
+
+        <div class="config-section">
+          <h2>Корпус</h2>
+          <select class="config-select">
+            <option value="">Выберите корпус</option>
+            <option value="Mid Tower">Mid Tower</option>
+            <option value="Full Tower">Full Tower</option>
+            <option value="Mini Tower">Mini Tower</option>
+          </select>
+        </div>
+
+        <!-- Кнопка "Собрать ПК" -->
+        <button type="button" class="build-pc-button">Собрать ПК</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="icon-div">
+        <a href="index.html"><img src="img/logo.svg" alt="logo" /></a>
+      </div>
+      <div class="footer-txt">
+        <div class="block">
+          <div class="fot-m-p">
+            <p>Компания</p>
+          </div>
+          <ul class="fot-p">
+            <li><a href="pack.html" target="_blank">О компании</a></li>
+            <li><a href="pack.html" target="_blank">Документы</a></li>
+            <li><a href="pack.html" target="_blank">Контакты</a></li>
+            <li><a href="pack.html" target="_blank">Партнеры</a></li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <div class="fot-m-p">
+            <p>Информация</p>
+          </div>
+          <ul class="fot-p">
+            <li><a href="pack.html" target="_blank">Условаия оплаты</a></li>
+            <li><a href="pack.html" target="_blank">Условаия доставки</a></li>
+            <li><a href="pack.html" target="_blank">Гарантия на товар</a></li>
+            <li><a href="pack.html" target="_blank">Политика</a></li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <div class="fot-m-p">
+            <p>Помощь</p>
+          </div>
+          <ul class="fot-p">
+            <li><a href="pack.html" target="_blank">Условаия оплаты</a></li>
+            <li><a href="pack.html" target="_blank">Условаия доставки</a></li>
+            <li><a href="pack.html" target="_blank">Гарантия на товар</a></li>
+            <li><a href="pack.html" target="_blank">Вопрос-ответ</a></li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <div class="fot-m-p">
+            <p>Контакты</p>
+          </div>
+          <ul class="fot-p">
+            <li><a href="mailto:Exemple@email.com">Exemple@email.com</a></li>
+            <li><a href="tel:+7 324 322-32-32">+7 324 322-32-32</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
